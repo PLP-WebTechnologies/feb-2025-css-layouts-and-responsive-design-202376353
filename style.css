@@ -1,0 +1,122 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease; 
+}
+
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ff5252; 
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-top: 15px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  padding: 20px;
+  min-height: 50vh; 
+  background-color: #81d4fa; 
+  margin: 20px 0;
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+.item {
+  background-color: #ffb6c1; 
+  padding: 20px;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 200px; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-areas: 
+    'header header header header header'
+    'menu main main right right'
+    'footer footer footer footer footer';
+  margin: 20px 0;
+}
+
+.item1 { grid-area: header; background-color: #81d4fa; padding: 10px; }
+.item2 { grid-area: menu; background-color: #66bb6a; padding: 10px; } 
+.item3 { grid-area: main; background-color: #ff8a65; padding: 10px; } 
+.item4 { grid-area: right; background-color: #b3e5fc; padding: 10px; } 
+.item5 { grid-area: footer; background-color: #a5d6a7; padding: 10px; } 
+
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+  
+  .flex-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #e0e0e0; 
+  }
+  
+  .container {
+    width: 100%;
+    background-color: #76ff03; 
+    margin: 10px 0;
+  }
+}
+  @media only screen and (max-width: 400px) {
+    body {
+      background-color: #e9db19; 
+    }
+    
+    .container {
+      width: 100%;
+      background-color: #e203ff; 
+      margin: 10px 0;
+    }
+    
+  
+  .grid-container {
+    grid-template-areas: 
+      'header header header header header'
+      'menu menu menu menu menu'
+      'main main main main main'
+      'right right right right right'
+      'footer footer footer footer footer';
+  }
+}
+
+
+.item1, .item2, .item4, .item5, .item3 {
+  color: black; 
+}
